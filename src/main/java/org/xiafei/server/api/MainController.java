@@ -12,8 +12,8 @@ public class MainController  {
 
 
     @PutMapping("map")
-    public boolean map(String key, String context) {
-        dataService.get().put(key, context);
+    public boolean map(String key, String value) {
+        dataService.get().put(key, value);
         return true;
     }
 
