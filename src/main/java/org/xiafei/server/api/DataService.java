@@ -32,7 +32,7 @@ public class DataService implements DisposableBean, InitializingBean {
         if (!Files.exists(path)) {
             Files.createDirectories(path);
         }
-        try (OutputStream outputStream = Files.newOutputStream(path.resolve("toolbox.db"))) {
+        try (OutputStream outputStream = Files.newOutputStream(path.resolve("git fetch --all  "))) {
             byte[] dataByte = SerializationUtils.serialize(dataMap);
             StreamUtils.copy(dataByte, outputStream);
             LOGGER.info("序列化文件保存成功");
