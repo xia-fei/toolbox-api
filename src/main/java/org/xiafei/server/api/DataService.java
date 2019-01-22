@@ -19,6 +19,7 @@ import java.util.Map;
 @Component
 public class DataService implements DisposableBean, InitializingBean {
     private final String filePath = "/data/file";
+    private final String fileName="toolbox.db";
     private final Logger LOGGER = LoggerFactory.getLogger(DataService.class);
     private Map<String, String> dataMap = new HashMap<>();
 
@@ -32,7 +33,7 @@ public class DataService implements DisposableBean, InitializingBean {
         if (!Files.exists(path)) {
             Files.createDirectories(path);
         }
-        try (OutputStream outputStream = Files.newOutputStream(path.resolve("git fetch --all  "))) {
+        try (OutputStream outputStream = Files.newOutputStream(path.resolve(fileName))) {
             byte[] dataByte = SerializationUtils.serialize(dataMap);
             StreamUtils.copy(dataByte, outputStream);
             LOGGER.info("序列化文件保存成功");
@@ -43,7 +44,7 @@ public class DataService implements DisposableBean, InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        Path path = Paths.get(filePath).resolve("toolbox.db");
+        Path path = Paths.get(filePath).resolve(fileName);
         if (Files.exists(path)) {
             try (InputStream inputStream = Files.newInputStream(path)) {
                 dataMap = (Map<String, String>) SerializationUtils.deserialize(StreamUtils.copyToByteArray(inputStream));
