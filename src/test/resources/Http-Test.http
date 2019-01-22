@@ -5,9 +5,9 @@
 # * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
 # * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
 
-PUT localhost:8080/map?key=2&value=22222
+PUT https://api.xia-fei.com/map?key=note&value=222
 
 ###
-GET localhost:8080/map?key=2
+GET https://api.xia-fei.com/map?key=2
 
 ###
