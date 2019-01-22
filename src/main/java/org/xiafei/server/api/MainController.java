@@ -3,6 +3,7 @@ package org.xiafei.server.api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -12,7 +13,7 @@ public class MainController  {
 
 
     @PostMapping("map")
-    public boolean map(String key, String value) {
+    public boolean map(String key, @RequestBody String value) {
         dataService.get().put(key, value);
         return true;
     }
