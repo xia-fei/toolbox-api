@@ -1,5 +1,6 @@
 #!/bin/bash
 basePath=/root/xiafei
+cd ${basePath}
 #所有后端接口 8001
 git clone https://github.com/xia-fei/toolbox-api.git
 #所有前端项目
