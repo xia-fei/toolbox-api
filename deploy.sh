@@ -12,10 +12,11 @@ toolbox-api(){
 cd ${basePath}
 #所有后端接口 8001
 git clone https://github.com/xia-fei/toolbox-api.git
-killProcess api-0.0.1-SNAPSHOT.jar
+
 cd ${basePath}/toolbox-api && \
 git pull && \
-mvn package -Dmaven.test.skip=true && \
+mvn package -Dmaven.test.skip=true
+killProcess api-0.0.1-SNAPSHOT.jar
 nohup java -Dserver.port=8001 -jar target/api-0.0.1-SNAPSHOT.jar &
 }
 #文件服务器部署 8002
@@ -23,10 +24,11 @@ image-server(){
 #所有前端项目
 cd ${basePath}
 git clone https://github.com/xia-fei/file-server.git
-killProcess file-0.0.1-SNAPSHOT.jar
+
 cd ${basePath}/file-server && \
 git pull && \
-mvn package -Dmaven.test.skip=true && \
+mvn package -Dmaven.test.skip=true
+killProcess file-0.0.1-SNAPSHOT.jar
 nohup java -Daccess.key.secret="QGWGUdG8wxbNTz1QCQ05SbNifXXZ7n" -Daccess.key.id="LTAIX3Mkmhdk2GeB" -Dserver.port=8002 -jar target/file-0.0.1-SNAPSHOT.jar &
 }
 
@@ -34,10 +36,11 @@ nohup java -Daccess.key.secret="QGWGUdG8wxbNTz1QCQ05SbNifXXZ7n" -Daccess.key.id=
 m-server(){
 cd ${basePath}
 git clone https://github.com/xia-fei/web-chat-room.git
-killProcess cloud-0.0.1-SNAPSHOT.jar
+
 cd ${basePath}/web-chat-room && \
 git pull && \
-mvn package -Dmaven.test.skip=true && \
+mvn package -Dmaven.test.skip=true
+killProcess cloud-0.0.1-SNAPSHOT.jar
 nohup java -Dserver.port=8003 -jar target/cloud-0.0.1-SNAPSHOT.jar&
 }
 
