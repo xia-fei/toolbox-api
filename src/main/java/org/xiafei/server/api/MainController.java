@@ -36,6 +36,7 @@ public class MainController {
             return new ObjectMapper().readValue(userinfoShareResponse.getBody(), Map.class);
         } catch (Exception e) {
             //处理异常
+            e.printStackTrace();
             return e.toString();
         }
 
