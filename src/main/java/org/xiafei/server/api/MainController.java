@@ -13,7 +13,7 @@ public class MainController {
     @Autowired
     AlipayService alipayService;
 
-    @GetMapping("")
+    @GetMapping("/html")
     public String html() {
         return dataService.get().get("html");
     }
