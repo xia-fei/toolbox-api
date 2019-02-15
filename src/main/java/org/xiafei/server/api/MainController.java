@@ -1,10 +1,7 @@
 package org.xiafei.server.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class MainController {
@@ -16,6 +13,11 @@ public class MainController {
     @GetMapping("/html")
     public String html() {
         return dataService.get().get("html");
+    }
+
+    @GetMapping("/html/{id}")
+    public String html(@PathVariable("id") String id) {
+        return dataService.get().get(id);
     }
 
     @GetMapping("alipay")
