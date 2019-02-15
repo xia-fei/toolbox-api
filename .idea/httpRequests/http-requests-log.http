@@ -1,0 +1,140 @@
+POST http://localhost:8090/map?key=html
+
+sdsadasdasdasd
+
+<> 2019-02-15T044837.200.json
+
+###
+
+GET http://localhost:8090/map?key=note2
+
+<> 2019-01-22T021454.200.txt
+
+###
+
+POST http://localhost:8090/map?key=note2
+
+sdsadasdasdasd
+
+<> 2019-01-22T021442.200.json
+
+###
+
+POST http://localhost:8080/map?key=note2
+
+sdsadasdasdasd
+
+<> 2019-01-22T021435.404.html
+
+###
+
+POST http://localhost:8080/map?key=note2
+
+sdsadasdasdasd
+
+<> 2019-01-22T021316.404.html
+
+###
+
+GET https://api.xia-fei.com/map?key=note2
+
+###
+
+POST https://api.xia-fei.com/map?key=note2
+
+sdsadasdasdasd
+
+<> 2019-01-22T021226.200.json
+
+###
+
+PUT https://api.xia-fei.com/map?key=note&value=222
+
+<> 2019-01-22T120149.200.json
+
+###
+
+PUT https://api.xia-fei.com/map?key=note&value=222
+
+<> 2019-01-22T115428.200.json
+
+###
+
+GET https://api.xia-fei.com/map?key=2
+
+<> 2019-01-22T113518.200.txt
+
+###
+
+PUT https://api.xia-fei.com/map?key=2&value=222
+
+<> 2019-01-22T113517.200.json
+
+###
+
+GET https://api.xia-fei.com/map?key=2
+
+<> 2019-01-22T113515.200.txt
+
+###
+
+GET https://api.xia-fei.com/map?key=2
+
+<> 2019-01-22T113511.200.txt
+
+###
+
+PUT https://api.xia-fei.com/map?key=2&value=2
+
+<> 2019-01-22T113503.200.json
+
+###
+
+GET http://localhost:8080/map?key=2
+
+<> 2019-01-21T045458.200.txt
+
+###
+
+PUT http://localhost:8080/map?key=2&value=22222
+
+<> 2019-01-21T045457.200.json
+
+###
+
+GET http://localhost:8080/map?key=2
+
+<> 2019-01-21T045452.200.txt
+
+###
+
+PUT http://localhost:8080/map?key=2&value=444444
+
+<> 2019-01-21T045451.200.json
+
+###
+
+GET http://localhost:8080/map?key=2
+
+<> 2019-01-21T045424.200.txt
+
+###
+
+PUT http://localhost:8080/map?key=2&context=444444
+
+<> 2019-01-21T045422.200.json
+
+###
+
+GET http://localhost:8080/map?key=2
+
+<> 2019-01-21T045418.200.txt
+
+###
+
+PUT http://localhost:8080/map?key=2&context=22
+
+<> 2019-01-21T045406.200.json
+
+###
+

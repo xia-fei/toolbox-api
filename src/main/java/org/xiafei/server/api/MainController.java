@@ -13,6 +13,11 @@ public class MainController {
     @Autowired
     AlipayService alipayService;
 
+    @GetMapping("")
+    public String html() {
+        return dataService.get().get("html");
+    }
+
     @GetMapping("alipay")
     public Object alipay(String auth_code) {
         return alipayService.getUserinfoShareResponse(auth_code);

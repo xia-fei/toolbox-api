@@ -8,7 +8,7 @@
 POST https://api.xia-fei.com/map?key=note&value=222
 
 ###
-POST http://localhost:8090/map?key=note2
+POST http://localhost:8090/map?key=html
 
 sdsadasdasdasd
 ###
