@@ -5,10 +5,15 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class MainController {
-    @Autowired
+    private final
     DataService dataService;
-    @Autowired
+    private final
     AlipayService alipayService;
+
+    public MainController(DataService dataService, AlipayService alipayService) {
+        this.dataService = dataService;
+        this.alipayService = alipayService;
+    }
 
     @GetMapping("/html")
     public String html() {
