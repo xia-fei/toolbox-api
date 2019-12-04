@@ -11,7 +11,7 @@
     <groupId>org.xiafei.server</groupId>
     <artifactId>api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>api</name>
+    <name>toolbox-api</name>
     <description>java-api</description>
 
     <properties>
@@ -37,6 +37,7 @@
     </dependencies>
 
     <build>
+        <finalName>toolbox-api</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
