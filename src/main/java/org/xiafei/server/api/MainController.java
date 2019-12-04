@@ -3,6 +3,8 @@ package org.xiafei.server.api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+
 @RestController
 public class MainController {
     private final
@@ -39,5 +41,11 @@ public class MainController {
     @GetMapping("map")
     public String get(String key) {
         return dataService.get().get(key);
+    }
+
+    @PostMapping("/servlet")
+    @ResponseBody
+    public String servlet(HttpServletRequest request,@RequestBody String body){
+        return request.getQueryString()+":"+body;
     }
 }

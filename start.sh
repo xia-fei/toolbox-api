@@ -14,7 +14,7 @@ kill  $PID
 
 sleep 2s;
 
-nohup  java $JVM_OPS -jar  target/$APP_NAME   2>&1 &
+nohup  java $JVM_OPS -jar  target/$APP_NAME &
 
 
 tail -f nohup.out

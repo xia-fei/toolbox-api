@@ -16,3 +16,10 @@ sdsadasdasdasd
 GET http://localhost:8090/map?key=note2
 
 ###
+
+POST http://localhost:8080/servlet
+Content-Type: application/x-www-form-urlencoded;charset=utf-8
+
+data=%26a%26
+
+###
