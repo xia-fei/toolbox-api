@@ -10,7 +10,9 @@ echo " ----------------------------------------"
 echo "|  APP_NAME:"$APP_NAME"  PID:"$PID
 echo " ----------------------------------------"
 
-kill -9 $PID
+kill  $PID
+
+sleep 2s;
 
 nohup  java $JVM_OPS -jar  target/$APP_NAME   2>&1 &
 
