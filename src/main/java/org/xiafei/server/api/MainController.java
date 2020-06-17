@@ -3,7 +3,11 @@ package org.xiafei.server.api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 @RestController
 public class MainController {
@@ -45,8 +49,30 @@ public class MainController {
 
     @PostMapping("/servlet")
     @ResponseBody
-    public String servlet(HttpServletRequest request,@RequestBody String body){
-        return request.getQueryString()+":"+body;
+    public String servlet(HttpServletRequest request, @RequestBody String body) {
+        return request.getQueryString() + ":" + body;
+    }
+
+    @GetMapping("/lazy")
+    public void lazy(HttpServletResponse response) throws InterruptedException {
+
+        try {
+
+            ServletOutputStream outputStream = response.getOutputStream();
+
+            response.setContentType("text/html;charset=utf-8");
+//            response.flushBuffer();
+
+            for (int i = 0; i < 1000; i++) {
+                outputStream.print("==");
+                outputStream.flush();
+                Thread.sleep(100);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
     }
 }
 
